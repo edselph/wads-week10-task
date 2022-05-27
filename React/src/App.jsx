@@ -8,12 +8,14 @@ import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { Auth } from "./firebase-config";
 
+
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
   const SignUserOut = () => {
     localStorage.clear();
     signOut(Auth);
     window.location.href="login";
+    
   }
   return (
     <Router>
